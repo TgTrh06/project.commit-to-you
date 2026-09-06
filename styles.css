@@ -57,6 +57,8 @@ mark { padding: 0 0.08em; background: transparent; color: var(--wine); font-weig
 .profile-grid div { min-height: 170px; padding: 1.6rem 1.6rem 1.6rem 0; border-bottom: 1px solid var(--line); }
 .profile-grid div:nth-child(odd) { padding-right: 2rem; border-right: 1px solid var(--line); }
 .profile-grid div:nth-child(even) { padding-left: 2rem; }
+.portrait-illustration { width: min(100%, 300px); margin: 3rem 0 0; }
+.portrait-illustration img { display: block; width: 100%; height: auto; }
 dt { display: inline-block; margin-bottom: 0.85rem; padding: 0 0.16em 0.08em; background: linear-gradient(to top, rgb(231 195 183 / 78%) 36%, transparent 36%); color: var(--wine); font-family: var(--mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; }
 dd { margin: 0; font-size: 1.04rem; line-height: 1.55; }
 .inline-note { display: block; margin-top: 0.45rem; color: var(--muted); font-family: var(--mono); font-size: 0.7rem; line-height: 1.45; }
@@ -111,6 +113,10 @@ code { font-family: var(--mono); font-size: 0.72rem; }
   .hero { min-height: 620px; }
   .hero-bottom, footer { align-items: flex-start; flex-direction: column; }
   .recruitment-note, .about-tung, .glimpses, .strengths, .confession { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-aside { display: contents; }
+  .about-aside .section-label { order: 0; }
+  .about-aside .portrait-illustration { order: 1; width: min(100%, 340px); margin: 0 auto; }
+  .about-content { order: 2; }
   .profile-grid { grid-column: auto; grid-template-columns: 1fr; margin-top: 0.5rem; }
   .quick-facts { gap: 0.45rem; }
   .profile-grid div, .profile-grid div:nth-child(odd), .profile-grid div:nth-child(even) { min-height: 0; padding: 1.5rem 0; border-right: 0; }
