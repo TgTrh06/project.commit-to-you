@@ -52,6 +52,7 @@ blockquote { margin: 1.8rem 0; padding: 0.3rem 0 0.3rem 1.5rem; border-left: 2px
 .profile-grid div:nth-child(even) { padding-left: 2rem; }
 dt { margin-bottom: 0.8rem; color: var(--wine); font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; }
 dd { margin: 0; font-size: 1.04rem; line-height: 1.55; }
+.inline-note { display: block; margin-top: 0.45rem; color: var(--muted); font-family: var(--mono); font-size: 0.7rem; line-height: 1.45; }
 .strengths { background: var(--ink); color: #f8f0e6; display: grid; grid-template-columns: 0.8fr 2fr; gap: 5rem; }
 .strengths .section-label { color: #d6b2a6; }
 .strengths .eyebrow { color: var(--rose); }
@@ -66,8 +67,11 @@ dd { margin: 0; font-size: 1.04rem; line-height: 1.55; }
 .letter .eyebrow { margin-bottom: 2rem; }
 .letter h2 { max-width: none; margin: 0 auto 1.6rem; }
 .letter > p:not(.eyebrow) { max-width: 590px; margin: 0 auto 2.5rem; color: var(--muted); }
-.primary-button { display: inline-flex; gap: 2.5rem; justify-content: space-between; align-items: center; padding: 0.95rem 1.1rem 0.95rem 1.4rem; border: 1px solid var(--wine); background: var(--wine); color: #fff8f0; cursor: pointer; font: 700 0.82rem var(--sans); text-decoration: none; transition: background 180ms ease, color 180ms ease; }
+.letter-action { display: flex; justify-content: center; }
+.primary-button { display: inline-flex; gap: 2.5rem; justify-content: space-between; align-items: center; padding: 0.95rem 1.1rem 0.95rem 1.4rem; border: 1px solid var(--wine); background: var(--wine); color: #fff8f0; cursor: pointer; font: 700 0.82rem var(--sans); text-decoration: none; transition: background 180ms ease, color 180ms ease, transform 180ms ease; }
 .primary-button:hover, .primary-button:focus-visible { background: transparent; color: var(--wine); }
+.primary-button:hover span, .primary-button:focus-visible span { transform: translate(0.16rem, -0.16rem); }
+.primary-button span { transition: transform 180ms ease; }
 footer { display: flex; justify-content: space-between; gap: 2rem; padding-top: 1.5rem; padding-bottom: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.84rem; }
 footer p { margin: 0; }
 dialog { width: min(540px, calc(100% - 2rem)); padding: 3rem; border: 0; background: var(--paper); color: var(--ink); box-shadow: 0 1.5rem 5rem rgb(43 26 30 / 35%); }
@@ -95,5 +99,6 @@ code { font-family: var(--mono); font-size: 0.72rem; }
   .cv-section, .strengths { padding-top: 5rem; padding-bottom: 5rem; }
   .letter { padding-top: 6rem; padding-bottom: 6rem; text-align: left; }
   .letter h2, .letter > p:not(.eyebrow) { margin-left: 0; }
+  .letter-action { justify-content: flex-start; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .primary-button { transition: none; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .primary-button, .primary-button span { transition: none; } }
