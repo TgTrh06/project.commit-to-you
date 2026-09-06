@@ -57,7 +57,7 @@ mark { padding: 0 0.08em; background: transparent; color: var(--wine); font-weig
 .profile-grid div { min-height: 170px; padding: 1.6rem 1.6rem 1.6rem 0; border-bottom: 1px solid var(--line); }
 .profile-grid div:nth-child(odd) { padding-right: 2rem; border-right: 1px solid var(--line); }
 .profile-grid div:nth-child(even) { padding-left: 2rem; }
-dt { margin-bottom: 0.8rem; color: var(--wine); font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; }
+dt { display: inline-block; margin-bottom: 0.85rem; padding: 0 0.16em 0.08em; background: linear-gradient(to top, rgb(231 195 183 / 78%) 36%, transparent 36%); color: var(--wine); font-family: var(--mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; }
 dd { margin: 0; font-size: 1.04rem; line-height: 1.55; }
 .inline-note { display: block; margin-top: 0.45rem; color: var(--muted); font-family: var(--mono); font-size: 0.7rem; line-height: 1.45; }
 .glimpses { background: #ead2c7; }
@@ -82,16 +82,18 @@ dd { margin: 0; font-size: 1.04rem; line-height: 1.55; }
 .strength-list h3 { margin: 2rem 0 0.8rem; font-family: var(--serif); font-size: 1.6rem; font-weight: 600; line-height: 1.15; }
 .confession-copy { max-width: 720px; }
 .confession-copy p { max-width: 600px; color: var(--muted); }
-.letter { padding-top: 8rem; padding-bottom: 8rem; text-align: center; }
+.letter { padding-top: 8rem; padding-bottom: 8rem; background: #ead2c7; text-align: center; }
 .letter .eyebrow { margin-bottom: 2rem; }
 .letter h2 { max-width: none; margin: 0 auto 1.6rem; }
-.letter > p:not(.eyebrow) { max-width: 590px; margin: 0 auto 2.5rem; color: var(--muted); }
+.letter > p:not(.eyebrow) { max-width: 590px; margin: 0 auto; color: var(--muted); }
+.letter > p:not(.eyebrow):not(.letter-aside) { margin-bottom: 1rem; }
+.letter > p.letter-aside { margin-bottom: 2.5rem; color: var(--wine); font-family: var(--serif); font-size: 1.05rem; font-style: italic; line-height: 1.45; }
 .letter-action { display: flex; justify-content: center; }
 .primary-button { display: inline-flex; gap: 2.5rem; justify-content: space-between; align-items: center; padding: 0.95rem 1.1rem 0.95rem 1.4rem; border: 1px solid var(--wine); background: var(--wine); color: #fff8f0; cursor: pointer; font: 700 0.82rem var(--sans); text-decoration: none; transition: background 180ms ease, color 180ms ease, transform 180ms ease; }
 .primary-button:hover, .primary-button:focus-visible { background: transparent; color: var(--wine); }
 .primary-button:hover span, .primary-button:focus-visible span { transform: translate(0.16rem, -0.16rem); }
 .primary-button span { transition: transform 180ms ease; }
-footer { display: flex; justify-content: space-between; gap: 2rem; padding-top: 1.5rem; padding-bottom: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.84rem; }
+footer { display: flex; justify-content: space-between; gap: 2rem; padding-top: 1.5rem; padding-bottom: 1.5rem; border-top: 1px solid #c79b90; background: #ead2c7; color: var(--muted); font-size: 0.84rem; }
 footer p { margin: 0; }
 dialog { width: min(700px, calc(100% - 3rem)); padding: clamp(2rem, 5vw, 3rem); border: 0; background: var(--paper); color: var(--ink); box-shadow: 0 1.5rem 5rem rgb(43 26 30 / 35%); }
 dialog::backdrop { background: rgb(43 26 30 / 60%); }
