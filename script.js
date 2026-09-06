@@ -2,8 +2,15 @@ const dialog = document.querySelector('#reply-dialog');
 const openButton = document.querySelector('[data-open-dialog]');
 const closeButton = document.querySelector('[data-close-dialog]');
 
-openButton.addEventListener('click', () => dialog.showModal());
+openButton.addEventListener('click', () => {
+  dialog.showModal();
+  openButton.setAttribute('aria-expanded', 'true');
+});
 closeButton.addEventListener('click', () => dialog.close());
+
+dialog.addEventListener('close', () => {
+  openButton.setAttribute('aria-expanded', 'false');
+});
 
 dialog.addEventListener('click', (event) => {
   if (event.target === dialog) dialog.close();
