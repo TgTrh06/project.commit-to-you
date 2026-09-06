@@ -16,7 +16,7 @@ body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(
 a { color: inherit; }
 .skip-link { position: fixed; top: 0.5rem; left: 0.5rem; z-index: 5; padding: 0.6rem 0.9rem; background: var(--ink); color: white; transform: translateY(-150%); }
 .skip-link:focus { transform: translateY(0); }
-.site-header, .hero, .recruitment-note, .cv-section, .strengths, .letter, footer { padding-left: max(1.5rem, calc((100vw - 1180px) / 2)); padding-right: max(1.5rem, calc((100vw - 1180px) / 2)); }
+.site-header, .hero, .recruitment-note, .about-tung, .glimpses, .strengths, .confession, .letter, footer { padding-left: max(1.5rem, calc((100vw - 1180px) / 2)); padding-right: max(1.5rem, calc((100vw - 1180px) / 2)); }
 .site-header { display: flex; justify-content: space-between; align-items: center; min-height: 72px; border-bottom: 1px solid var(--line); font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .site-header p { margin: 0; }
 .recipient-line { font-family: var(--serif); font-size: 1.15rem; font-style: italic; font-weight: 600; letter-spacing: -0.02em; text-transform: none; }
@@ -27,32 +27,49 @@ a { color: inherit; }
 .eyebrow, .section-label { font-family: var(--mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
 .eyebrow { margin: 0 0 1rem; color: var(--wine); }
 h1, h2, h3, p { margin-top: 0; }
-h1, h2 { font-family: var(--serif); font-weight: 600; line-height: 0.98; letter-spacing: -0.045em; }
-h1 { max-width: 1000px; margin: 0; font-size: clamp(3.4rem, 8vw, 7.4rem); }
+h1, h2 { font-family: var(--serif); font-weight: 600; letter-spacing: -0.045em; }
+h1 { max-width: 1000px; margin: 0; font-size: clamp(3.4rem, 8vw, 7.4rem); line-height: 1.04; }
 em { color: var(--wine); }
 .hero-bottom { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-top: 4rem; }
 .hero-bottom p { margin: 0; color: var(--muted); }
 .text-link { font-weight: 700; text-underline-offset: 0.35em; }
 .text-link span { margin-left: 0.4rem; }
 .recruitment-note { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 5rem; padding-top: 6rem; padding-bottom: 6rem; background: #ead2c7; }
-h2 { margin-bottom: 1.25rem; font-size: clamp(2.25rem, 4vw, 4rem); }
+h2 { margin-bottom: 1.25rem; font-size: clamp(2.25rem, 4vw, 4rem); line-height: 1.1; }
 .recruitment-note h2 { font-size: clamp(2rem, 3.5vw, 3.5rem); }
 .note-copy { max-width: 600px; }
 .note-copy p:last-child { margin-bottom: 0; }
 blockquote { margin: 1.8rem 0; padding: 0.3rem 0 0.3rem 1.5rem; border-left: 2px solid var(--wine); font-family: var(--serif); font-size: clamp(1.4rem, 2.5vw, 2rem); font-style: italic; line-height: 1.25; }
-.cv-section, .strengths { padding-top: 7rem; padding-bottom: 7rem; }
-.cv-section { display: grid; grid-template-columns: 0.8fr 2fr; column-gap: 5rem; row-gap: 1.5rem; }
+.about-tung, .glimpses, .strengths, .confession { padding-top: 7rem; padding-bottom: 7rem; }
+.about-tung, .glimpses, .confession { display: grid; grid-template-columns: 0.8fr 2fr; gap: 5rem; }
+.about-content, .glimpses-content, .confession-copy { max-width: 780px; }
+.about-content h2, .glimpses-content h2, .confession-copy h2 { max-width: 690px; }
+.about-copy { max-width: 600px; color: var(--muted); }
+.about-copy p:last-child, .confession-copy p:last-child { margin-bottom: 0; }
+.quick-facts { display: flex; flex-wrap: wrap; gap: 0.55rem; margin: 0 0 2rem; padding: 0; list-style: none; }
+.quick-facts li { padding: 0.34rem 0.55rem; border: 1px solid var(--line); color: var(--wine); font: 500 0.68rem var(--mono); letter-spacing: 0.04em; }
+.about-story { font-size: 1.08rem; line-height: 1.7; }
+.about-trait { margin-bottom: 0; }
+mark { padding: 0 0.08em; background: transparent; color: var(--wine); font-weight: 700; }
 .section-label { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted); }
 .section-label p { margin: 0; }
-.cv-intro { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
-.cv-intro p { max-width: 600px; margin-bottom: 1.4rem; }
-.profile-grid { grid-column: 2; display: grid; grid-template-columns: 1fr 1fr; margin: 0; border-top: 1px solid var(--line); }
+.profile-grid { display: grid; grid-template-columns: 1fr 1fr; margin: 3.5rem 0 0; border-top: 1px solid var(--line); }
 .profile-grid div { min-height: 170px; padding: 1.6rem 1.6rem 1.6rem 0; border-bottom: 1px solid var(--line); }
 .profile-grid div:nth-child(odd) { padding-right: 2rem; border-right: 1px solid var(--line); }
 .profile-grid div:nth-child(even) { padding-left: 2rem; }
 dt { margin-bottom: 0.8rem; color: var(--wine); font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; }
 dd { margin: 0; font-size: 1.04rem; line-height: 1.55; }
 .inline-note { display: block; margin-top: 0.45rem; color: var(--muted); font-family: var(--mono); font-size: 0.7rem; line-height: 1.45; }
+.glimpses { background: #ead2c7; }
+.glimpses-intro { max-width: 560px; color: var(--muted); }
+.glimpse-list { margin-top: 3rem; border-top: 1px solid var(--line); }
+.glimpse-list details { border-bottom: 1px solid var(--line); }
+.glimpse-list summary { display: grid; grid-template-columns: 3rem 1fr auto; align-items: center; gap: 1rem; padding: 1.25rem 0; cursor: pointer; font-family: var(--serif); font-size: clamp(1.3rem, 2vw, 1.7rem); font-weight: 600; line-height: 1.15; list-style: none; }
+.glimpse-list summary::-webkit-details-marker { display: none; }
+.glimpse-list summary::after { content: '+'; color: var(--wine); font-family: var(--mono); font-size: 1.25rem; font-weight: 400; }
+.glimpse-list details[open] summary::after { content: '−'; }
+.glimpse-list .number { color: var(--wine); font-family: var(--mono); font-size: 0.7rem; }
+.glimpse-list details > p { max-width: 620px; margin: 0; padding: 0 3rem 1.5rem 4rem; color: var(--muted); }
 .strengths { background: var(--ink); color: #f8f0e6; display: grid; grid-template-columns: 0.8fr 2fr; gap: 5rem; }
 .strengths .section-label { color: #d6b2a6; }
 .strengths .eyebrow { color: var(--rose); }
@@ -63,6 +80,8 @@ dd { margin: 0; font-size: 1.04rem; line-height: 1.55; }
 .strength-list p { color: #dccac2; }
 .strength-list .number { color: var(--rose); font-family: var(--mono); font-size: 0.7rem; }
 .strength-list h3 { margin: 2rem 0 0.8rem; font-family: var(--serif); font-size: 1.6rem; font-weight: 600; line-height: 1.15; }
+.confession-copy { max-width: 720px; }
+.confession-copy p { max-width: 600px; color: var(--muted); }
 .letter { padding-top: 8rem; padding-bottom: 8rem; text-align: center; }
 .letter .eyebrow { margin-bottom: 2rem; }
 .letter h2 { max-width: none; margin: 0 auto 1.6rem; }
@@ -74,7 +93,7 @@ dd { margin: 0; font-size: 1.04rem; line-height: 1.55; }
 .primary-button span { transition: transform 180ms ease; }
 footer { display: flex; justify-content: space-between; gap: 2rem; padding-top: 1.5rem; padding-bottom: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.84rem; }
 footer p { margin: 0; }
-dialog { width: min(540px, calc(100% - 2rem)); padding: 3rem; border: 0; background: var(--paper); color: var(--ink); box-shadow: 0 1.5rem 5rem rgb(43 26 30 / 35%); }
+dialog { width: min(700px, calc(100% - 3rem)); padding: clamp(2rem, 5vw, 3rem); border: 0; background: var(--paper); color: var(--ink); box-shadow: 0 1.5rem 5rem rgb(43 26 30 / 35%); }
 dialog::backdrop { background: rgb(43 26 30 / 60%); }
 dialog h2 { margin-top: 1.5rem; }
 .dialog-close { position: absolute; top: 0.8rem; right: 1rem; border: 0; background: none; color: var(--ink); cursor: pointer; font-size: 2rem; line-height: 1; }
@@ -89,14 +108,17 @@ code { font-family: var(--mono); font-size: 0.72rem; }
   .hero-break { display: none; }
   .hero { min-height: 620px; }
   .hero-bottom, footer { align-items: flex-start; flex-direction: column; }
-  .recruitment-note, .cv-section, .strengths { grid-template-columns: 1fr; gap: 2.5rem; }
-  .cv-intro { display: block; }
+  .recruitment-note, .about-tung, .glimpses, .strengths, .confession { grid-template-columns: 1fr; gap: 2.5rem; }
   .profile-grid { grid-column: auto; grid-template-columns: 1fr; margin-top: 0.5rem; }
+  .quick-facts { gap: 0.45rem; }
   .profile-grid div, .profile-grid div:nth-child(odd), .profile-grid div:nth-child(even) { min-height: 0; padding: 1.5rem 0; border-right: 0; }
   .strength-list { grid-template-columns: 1fr; margin-top: 3rem; }
   .strength-list article, .strength-list article + article { padding: 1.4rem 0; border-left: 0; border-bottom: 1px solid #634950; }
   .strength-list h3 { margin-top: 1rem; }
-  .cv-section, .strengths { padding-top: 5rem; padding-bottom: 5rem; }
+  .about-tung, .glimpses, .strengths, .confession { padding-top: 5rem; padding-bottom: 5rem; }
+  .glimpse-list { margin-top: 2.25rem; }
+  .glimpse-list summary { grid-template-columns: 2.5rem 1fr auto; font-size: 1.35rem; }
+  .glimpse-list details > p { padding-left: 0; }
   .letter { padding-top: 6rem; padding-bottom: 6rem; text-align: left; }
   .letter h2, .letter > p:not(.eyebrow) { margin-left: 0; }
   .letter-action { justify-content: flex-start; }
