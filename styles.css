@@ -3,6 +3,7 @@
   --muted: #6e5459;
   --paper: #f5f0e8;
   --wine: #7f283c;
+  --pine: #50634d;
   --rose: #e7c3b7;
   --line: #cbbab0;
   --serif: "Playfair Display", Georgia, serif;
@@ -44,6 +45,8 @@ blockquote { margin: 1.8rem 0; padding: 0.3rem 0 0.3rem 1.5rem; border-left: 2px
 .about-tung, .glimpses, .confession { display: grid; grid-template-columns: 0.8fr 2fr; gap: 5rem; }
 .about-content, .glimpses-content, .confession-copy { max-width: 780px; }
 .about-content h2, .glimpses-content h2, .confession-copy h2 { max-width: 690px; }
+.tung-name { color: var(--pine); white-space: nowrap; }
+.tung-tree { display: inline-block; width: 0.86em; height: 1em; margin-left: 0.12em; vertical-align: -0.08em; }
 .about-copy { max-width: 600px; color: var(--muted); }
 .about-copy p:last-child, .confession-copy p:last-child { margin-bottom: 0; }
 .quick-facts { display: flex; flex-wrap: wrap; gap: 0.55rem; margin: 0 0 2rem; padding: 0; list-style: none; }
